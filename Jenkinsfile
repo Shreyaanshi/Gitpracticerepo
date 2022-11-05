@@ -1,12 +1,12 @@
 pipeline {
     agent any
         triggers {
-                pollSCM('* * * * *')
+                CRON('* 18 * * 1-5')
     }
     stages {
         stage('vcs') {
             steps {
-                git branch: "dev", url: 'https://github.com/Shreyaanshi/Gitpracticerepo.git'
+                git branch: "qa", url: 'https://github.com/Shreyaanshi/Gitpracticerepo.git'
             }
                 }
                  

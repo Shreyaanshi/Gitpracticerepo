@@ -1,9 +1,6 @@
 pipeline {
     agent any
-        triggers {
-                pollSCM('* * * * *')
-    }
-    stages {
+            stages {
         stage('vcs') {
             steps {
                 git branch: "main", url: 'https://github.com/Shreyaanshi/Gitpracticerepo.git'
